@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Forms - CS08-InClass</title>
+    <style type="text/css">
+        p{
+            margin: 50px 100px;
+            padding: 20px 50px 20px 100px;
+            font-family: arial;
+            background-color: silver;
+        }
+        body{
+            color: navy;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Forms - CS08-InClass</h1>
+    <p>
+        Last Name:
+        <input type="text" name="lname" maxlength="100" size="20"/>
+        First Name:
+        <input type="text" name"fname" maxlength="100" size="20"/>
+        <br><br>
+        Gender:
+        Male <input type="radio" name="gender" value="male"/>
+        Female <input type="radio" name="gender" value="female"/>
+        <br><br>
+        My favorite Web Tech topics are
+        <br>
+        <input type="checkbox" name="Q" value="Basic HTML"/> Basic HTML
+        <br>
+        <input type="checkbox" name="Q" value="CSS"/> CSS
+        <br>
+        <input type="checkbox" name="Q" value="Tables"/> Tables
+        <br>
+        <input type="checkbox" name="Q" value="Forms"/> FORMS
+        <br><br>
+        What grade do you expect to receive?
+        <select name="grade">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
+        <br><br>
+        Please add any comments you have.
+        <br><br>
+        <textarea name="comments" rows="5" cols="29"></textarea>
+        <br><br>
+        <button type="submit" name="submit" value="submit">
+            SUBMIT <img src="images/mailbox.png" height="30" alt="submit_button"/>
+        </button>
+        <button type="reset" name="reset" value="reset">
+            RESET <img src="images/reset.png" height="30" alt="reset_button"/>
+        </button>
+    </p>
+    <a href="low.htm"/>List of Works</a>
+</body>
+
+</html>
