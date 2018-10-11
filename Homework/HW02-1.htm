@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<header>
+    <title>Exclusive Gifts for All Occasions</title>
+    <style type="text/css">
+        h1{
+            font-size: xx-large;
+            color: navy;
+            text-align: center;
+            font-family: arial;
+            margin: 0;
+        }
+        #firstrow{
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        th{
+            background-color: yellow;
+        }
+        .silver{
+            background-color: silver;
+            font-weight: normal;
+        }
+        .lime{
+            background-color: lime;
+            font-weight: normal;
+        }
+        img{
+            text-align: center;
+            width: 300px;
+            margin: auto;
+        }
+        table{
+            width: 70%;
+            border: 3px solid black;
+            margin: 10px auto;
+            font-family: arial;
+            height: 100%;
+        }
+        th, td{
+            border: 2px solid black;
+            font-size: 18px;
+        }
+        #column1{
+            width: 20%;
+        }
+        #column2{
+            width: 15%;
+        }
+        #column3{
+            width: 45%;
+        }
+        #column4{
+            width: 20%;
+        }
+    </style>
+</header>
+
+<body>
+    <h1>Exclusive Gifts for All Occasions<h1>
+    <table>
+        <tr id="firstrow">
+            <td colspan="4">
+                This is an exclusive vase from the Ming Dynasty.
+                <br>
+                It is available in two sizes, with and without gold plating
+            </td>
+        </tr>
+        <tr>
+            <th id="column1">Picture</th>
+            <th id="column2">Size</th>
+            <th id="column3">Plating</th>
+            <th id="column4">Price</th>
+        </tr>
+        <tr class="silver">
+            <td rowspan="4"><img src="images/vase.jpg" alt="Ming Vase"></td>
+            <td rowspan="2">Small</td>
+            <td>Without Plating</td>
+            <td>$65.00</td>
+        </tr>
+        <tr class="lime">
+            <td>With Gold Plating</td>
+            <td>$165.00</td>
+        </tr>
+        <tr class="silver">
+            <td rowspan="2">Large</td>
+            <td>Without Plating</td>
+            <td>$265.00</td>
+        </tr>
+        <tr class="lime">
+            <td>With Gold Plating</td>
+            <td>$565.00</td>
+        </tr>
+    </table>
+</body>
+
+</html>

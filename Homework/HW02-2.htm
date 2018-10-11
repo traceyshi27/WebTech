@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<header>
+    <title>Soap Survey</title>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        table{
+            font-family: arial;
+            font-weight: normal;
+            background-color: silver;
+            margin: auto;
+            width: 800px;
+            border: 1.5px solid black;
+        }
+        th{
+            font-family: arial;
+            font-weight: normal;
+            text-align: center;
+            border: 1.5px solid black;
+        }
+        td{
+            font-family: arial;
+            font-weight: normal;
+            border: 1.5px solid black;
+        }
+        img{
+            width: 100px;
+        }
+        .center{
+            text-align: center;
+        }
+        #beaver{
+            position: absolute;
+            bottom: 0;
+            background-image: url("../classwork/images/beaver.jpg");
+            width: 100%;
+            height: 60px;
+        }
+        #buttons{
+            text-align: center;
+        }
+        #tellus{
+            background-color: white;
+        }
+        h1{
+            font-size: 3em;
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: times new roman;
+            font-weight: normal;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+        #column1{
+            width: 25%;
+        }
+        #column2{
+            width: 25%;
+        }
+        #column3{
+            width: 20%;
+        }
+        #column4{
+            width: 30%;
+        }
+    </style>
+</header>
+
+<body>
+    <h1>Soap Survey</h1>
+    <table>
+        <tr>
+            <th id="column1">Soap Image</th>
+            <th id="column2">Soap Color<br>Preference</th>
+            <th id="column3">Soap Purchase<br>Intent</th>
+            <th id="column4">Soap Features Liked</th>
+        </tr>
+        <tr>
+            <td class="center"><img src="images/soap-2.jpg" alt="Soap 1"></td>
+            <td>
+                <input type="radio" name="color" value="green">Green
+                <br>
+                <input type="radio" name="color" value="gold">Gold (shown)
+                <br>
+                <input type="radio" name="color" value="red">Red
+            </td>
+            <td class="center">
+                At $5.00/unit
+                <br>
+                <select name="purchase">
+                    <option value="5">Definitely Buy</option>
+                    <option value="4">Likely Buy</option>
+                    <option value="3">Undecided</option>
+                    <option value="2">Unlikely Buy</option>
+                    <option value="1">Not Buy</option>
+                </select>
+            </td>
+            <td>
+                <input type="checkbox" name="features" value="shape">Shape
+                <br>
+                <input type="checkbox" name="features" value="size">Size
+                <br>
+                <input type="checkbox" name="features" value="smell">Smell
+                <br>
+                <input type="checkbox" name="features" value="texture">Texture
+            </td>
+        </tr>
+        <tr>
+            <td class="center"><img src="images/soap-1.jpg" alt="soap 2"></td>
+            <td>
+                <input type="radio" name="color" value="ivory">Ivory
+                <br>
+                <input type="radio" name="color" value="sandal wood">Sandal Wood (shown)
+                <br>
+                <input type="radio" name="color" value="pink">Pink
+            </td>
+            <td class="center">
+                At $8.00/unit
+                <br>
+                <select name="purchase">
+                    <option value="5">Definitely Buy</option>
+                    <option value="4">Likely Buy</option>
+                    <option value="3">Undecided</option>
+                    <option value="2">Unlikely Buy</option>
+                    <option value="1">Not Buy</option>
+                </select>
+            </td>
+            <td>
+                    <input type="checkbox" name="features" value="shape">Shape
+                    <br>
+                    <input type="checkbox" name="features" value="size">Size
+                    <br>
+                    <input type="checkbox" name="features" value="smell">Smell
+                    <br>
+                    <input type="checkbox" name="features" value="texture">Texture
+                </td>
+        </tr>
+        <tr>
+            <th id="tellus" colspan="4">Tell us about yourself....</th>
+        </tr>
+        <tr>
+            <td>
+                Gender:
+                <select>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </td>
+            <td colspan="3">
+                Age: (under 25 enter 1, 25-40 enter 2, else enter 3) <input class="yellow" type="text" name="age" maxlength="3" size="5">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Your comments are welcome:
+                <br>
+                <textarea class="yellow" name="comments" rows="4" cols="50"></textarea>
+            </td>
+            <td id="buttons" colspan="2">
+                <input type="submit" name="submit" value="Done">
+                <input id="red" type="reset" name="reset" value="Oops">
+            </td>
+        </tr>
+    </table>
+    <div id="beaver"></div>
+</body>
+
+</html>
