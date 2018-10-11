@@ -77,64 +77,35 @@
 
 <body>
     <h1>Soap Survey</h1>
-    <table>
-        <tr>
-            <th id="column1">Soap Image</th>
-            <th id="column2">Soap Color<br>Preference</th>
-            <th id="column3">Soap Purchase<br>Intent</th>
-            <th id="column4">Soap Features Liked</th>
-        </tr>
-        <tr>
-            <td class="center"><img src="images/soap-2.jpg" alt="Soap 1"></td>
-            <td>
-                <input type="radio" name="color" value="green">Green
-                <br>
-                <input type="radio" name="color" value="gold">Gold (shown)
-                <br>
-                <input type="radio" name="color" value="red">Red
-            </td>
-            <td class="center">
-                At $5.00/unit
-                <br>
-                <select name="purchase">
-                    <option value="5">Definitely Buy</option>
-                    <option value="4">Likely Buy</option>
-                    <option value="3">Undecided</option>
-                    <option value="2">Unlikely Buy</option>
-                    <option value="1">Not Buy</option>
-                </select>
-            </td>
-            <td>
-                <input type="checkbox" name="features" value="shape">Shape
-                <br>
-                <input type="checkbox" name="features" value="size">Size
-                <br>
-                <input type="checkbox" name="features" value="smell">Smell
-                <br>
-                <input type="checkbox" name="features" value="texture">Texture
-            </td>
-        </tr>
-        <tr>
-            <td class="center"><img src="images/soap-1.jpg" alt="soap 2"></td>
-            <td>
-                <input type="radio" name="color" value="ivory">Ivory
-                <br>
-                <input type="radio" name="color" value="sandal wood">Sandal Wood (shown)
-                <br>
-                <input type="radio" name="color" value="pink">Pink
-            </td>
-            <td class="center">
-                At $8.00/unit
-                <br>
-                <select name="purchase">
-                    <option value="5">Definitely Buy</option>
-                    <option value="4">Likely Buy</option>
-                    <option value="3">Undecided</option>
-                    <option value="2">Unlikely Buy</option>
-                    <option value="1">Not Buy</option>
-                </select>
-            </td>
-            <td>
+    <form>
+        <table>
+            <tr>
+                <th id="column1">Soap Image</th>
+                <th id="column2">Soap Color<br>Preference</th>
+                <th id="column3">Soap Purchase<br>Intent</th>
+                <th id="column4">Soap Features Liked</th>
+            </tr>
+            <tr>
+                <td class="center"><img src="images/soap-2.jpg" alt="Soap 1"></td>
+                <td>
+                    <input type="radio" name="color" value="green">Green
+                    <br>
+                    <input type="radio" name="color" value="gold">Gold (shown)
+                    <br>
+                    <input type="radio" name="color" value="red">Red
+                </td>
+                <td class="center">
+                    At $5.00/unit
+                    <br>
+                    <select name="purchase">
+                        <option value="5">Definitely Buy</option>
+                        <option value="4">Likely Buy</option>
+                        <option value="3">Undecided</option>
+                        <option value="2">Unlikely Buy</option>
+                        <option value="1">Not Buy</option>
+                    </select>
+                </td>
+                <td>
                     <input type="checkbox" name="features" value="shape">Shape
                     <br>
                     <input type="checkbox" name="features" value="size">Size
@@ -143,34 +114,65 @@
                     <br>
                     <input type="checkbox" name="features" value="texture">Texture
                 </td>
-        </tr>
-        <tr>
-            <th id="tellus" colspan="4">Tell us about yourself....</th>
-        </tr>
-        <tr>
-            <td>
-                Gender:
-                <select>
-                    <option value="0">Male</option>
-                    <option value="1">Female</option>
-                </select>
-            </td>
-            <td colspan="3">
-                Age: (under 25 enter 1, 25-40 enter 2, else enter 3) <input class="yellow" type="text" name="age" maxlength="3" size="5">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                Your comments are welcome:
-                <br>
-                <textarea class="yellow" name="comments" rows="4" cols="50"></textarea>
-            </td>
-            <td id="buttons" colspan="2">
-                <input type="submit" name="submit" value="Done">
-                <input id="red" type="reset" name="reset" value="Oops">
-            </td>
-        </tr>
-    </table>
+            </tr>
+            <tr>
+                <td class="center"><img src="images/soap-1.jpg" alt="soap 2"></td>
+                <td>
+                    <input type="radio" name="color" value="ivory">Ivory
+                    <br>
+                    <input type="radio" name="color" value="sandal wood">Sandal Wood (shown)
+                    <br>
+                    <input type="radio" name="color" value="pink">Pink
+                </td>
+                <td class="center">
+                    At $8.00/unit
+                    <br>
+                    <select name="purchase">
+                        <option value="5">Definitely Buy</option>
+                        <option value="4">Likely Buy</option>
+                        <option value="3">Undecided</option>
+                        <option value="2">Unlikely Buy</option>
+                        <option value="1">Not Buy</option>
+                    </select>
+                </td>
+                <td>
+                        <input type="checkbox" name="features" value="shape">Shape
+                        <br>
+                        <input type="checkbox" name="features" value="size">Size
+                        <br>
+                        <input type="checkbox" name="features" value="smell">Smell
+                        <br>
+                        <input type="checkbox" name="features" value="texture">Texture
+                    </td>
+            </tr>
+            <tr>
+                <th id="tellus" colspan="4">Tell us about yourself....</th>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                    <select>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </td>
+                <td colspan="3">
+                    Age: (under 25 enter 1, 25-40 enter 2, else enter 3) <input class="yellow" type="text" name="age" maxlength="3" size="5">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Your comments are welcome:
+                    <br>
+                    <textarea class="yellow" name="comments" rows="4" cols="50"></textarea>
+                </td>
+                <td id="buttons" colspan="2">
+                    <input type="submit" name="submit" value="Done">
+                    <input id="red" type="reset" name="reset" value="Oops">
+                </td>
+            </tr>
+        </table>
+    </form>    
     <div id="beaver"></div>
 </body>
 
