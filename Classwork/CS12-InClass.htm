@@ -11,23 +11,26 @@
             }
         </style>
         <script type="text/javascript">
-            function enlarge(){
-                let i = document.getElementById("map");
+            function enlarge(x){
+                let i = document.getElementById(x);
                 let w = i.width;
                 i.width = w * 1.5;
+                i.style.border = "red 1px solid";
             }
-            function shrink(){
-                let i = document.getElementById("map");
+            function shrink(x){
+                let i = document.getElementById(x);
                 let w = i.width;
                 i.width = w / 1.5;
+                i.style.border = "red 1px solid"
             }
         </script>
     </head>
 
     <body>
         <h2>Manipulating Styles and Images</h2>
-        <p><img id="map" src="images/usa.png" alt="Image goes here" title="map of USA" width="400" onmouseover="enlarge()" onmouseout="shrink()"></p>
+        <p><img id="first" src="images/usa.png" alt="Image goes here" title="map of USA" width="400" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)"></p>
         <hr>
+        <p><img id="second" src="images/class.jpg" width="400" onmouseover="enlarge(this.id)" onmouseout="shrink(this.id)"></p>
     </body>
 
 </html>
