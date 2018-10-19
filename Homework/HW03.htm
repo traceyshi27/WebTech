@@ -4,17 +4,69 @@
 
 <header>
     <title>Homework 3</title>
+    <style type="text/css">
+        img{
+            border: transparent solid 4px;
+        }
+        button{
+            color: rgb(85, 85, 85);
+        }
+    </style>
     <script type="text/javascript">
-
+        function displayimage(id){
+            if (id == "germanshepherd"){
+                document.getElementById("image").src = "images/germanshepherd.jpg";
+                document.getElementById("image").alt = "German Shepherd";
+                document.getElementById("image").title = "German Shepherd";
+                document.getElementById("h1").innerHTML = "This is a german shepherd.";
+                document.getElementById("image").style.borderColor = "green";
+                document.getElementById("germanshepherd").style.backgroundColor = "green";
+            }
+            else if (id == "penguin"){
+                document.getElementById("image").src = "images/penguin.jpg";
+                document.getElementById("image").alt = "Penguin";
+                document.getElementById("image").title = "Penguin";
+                document.getElementById("h1").innerHTML = "This is a penguin.";
+                document.getElementById("image").style.borderColor = "black";
+                document.getElementById("penguin").style.backgroundColor = "black";
+            }
+            else if (id == "snowleopard"){
+                document.getElementById("image").src = "images/snowleopard.jpg";
+                document.getElementById("image").alt = "Snow Leopard";
+                document.getElementById("image").title = "Snow Leopard";
+                document.getElementById("h1").innerHTML = "This is a snow leopard.";
+                document.getElementById("image").style.borderColor = "yellow";
+                document.getElementById("snowleopard").style.backgroundColor = "yellow";
+            }
+            else if (id == "lynx"){
+                document.getElementById("image").src = "images/lynx.jpg";
+                document.getElementById("image").alt = "Lynx";
+                document.getElementById("image").title = "Lynx";
+                document.getElementById("h1").innerHTML = "This is a lynx.";
+                document.getElementById("image").style.borderColor = "red";
+                document.getElementById("lynx").style.backgroundColor = "red";
+            }
+            else if (id == "image"){
+                if (document.getElementById("image").width == 200){
+                    document.getElementById("image").width *= 1.75;
+                }
+                else if (document.getElementById("image").width == 350){
+                    document.getElementById("image").width /= 1.75;
+                }
+            }
+        }
     </script>
 </header>
 
 <body>
-    <img id="image" src="" alt="" title="">
-    <button id="germanshepherd" onclick="image()">German Shepherd</button>
-    <button id="penguin" onclick="image()">Penguin</button>
-    <button id="snowleopard" onclick="image()">Snow Leopard</button>
-    <button id="lynx" onclick="image()">Lynx</button>
+    <button id="germanshepherd" onclick="displayimage(this.id)">German Shepherd</button>
+    <button id="penguin" onclick="displayimage(this.id)">Penguin</button>
+    <button id="snowleopard" onclick="displayimage(this.id)">Snow Leopard</button>
+    <button id="lynx" onclick="displayimage(this.id)">Lynx</button>
+    <h1 id="h1"></h1>
+    <img id="image" onmouseover="displayimage(this.id)" onmouseout="displayimage(this.id)" src="" alt="" title="" width="200">
+    <br><br>
+    <a href="../Classwork/low.htm">List of Works</a>
 </body>
 
 </html>
