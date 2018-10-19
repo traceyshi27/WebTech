@@ -35,10 +35,25 @@
             }
         </style>
         <script type="text/javascript">
-            function change(x){
-                document.getElementById(header2).innerHTML = "You just clicked " + x;
-                let i = document.getElementById(x)
-                i.style.backgroundColor = i *
+            function change(id){
+                    document.getElementById("header2").innerHTML = "You just clicked the " + id.split("-")[0] + " circle";
+                    if (id == "blue-circle"){
+                        document.getElementById("blue-circle").style.backgroundColor = "DarkBlue";
+                        document.getElementById("green-color").style.backgroundColor = "Olive";
+                        document.getElementById("red-color").style.backgroundColor = "LightRed";
+                        document.getElementById("red-color").display = "block";
+                    }
+                    else if (id == "green-circle"){
+                        document.getElementById("blue-circle").style.backgroundColor = "DarkBlue";
+                        document.getElementById("green-color").style.backgroundColor = "Olive";
+                        document.getElementById("red-color").style.backgroundColor = "LightRed";
+                        document.getElementById("red-color").display = "block";
+                    }
+                    else if (id == "red-color"){
+                        document.getElementById("red-color").display = "None";
+                        document.getElementById("green-color").style.backgroundColor = "Green";
+                        document.getElementById("blue-color").style.backgroundColor = "Blue";
+                    }
             }
         </script>
     </head>

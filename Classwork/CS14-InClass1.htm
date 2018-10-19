@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<header>
+    <title>Mega Million Number Generator</title>
+    <script type="text/javascript">
+        function win(){
+            let f = document.getElementById("generator");
+            let luckyNumber = f.lucky.value;
+            let winning = Math.floor(Math.random()*71);
+            let wn = document.getElementById("winning-numbers");
+            wn.innerHTML = wn.innerHTML + " " + winning;
+            f.lucky.value = "";
+        }
+    </script>
+</header>
+
+<body>
+    <h1>Mega Million Number Generator</h1>
+    <form id="generator">
+        <input type="text" name="lucky">
+        <input type="button" value="I will win!" onclick="win()">
+        <p>The winning numbers are: </p>
+        <p id="winning-numbers"></p>
+    </form>
+</body>
+
+</html>
