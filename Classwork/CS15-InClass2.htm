@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>CS15-InClass2 - Temperature Converter</title>
+        <style type="text/css">
+            form {
+                font-family: Arial;
+                font-weight: bold;
+                padding: 60px;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: Silver;
+            }
+            h1 {
+                font-family: Arial;
+                font-weight: bold;
+                text-align: center;
+            }
+            div#d1 {
+                margin-bottom: 40px;
+            }
+        </style>
+        <script type="text/javascript">
+            function convert(){
+                let myForm = document.getElementById("form");
+                let cel = myForm.cel.value;
+                let far = myForm.far.value;
+                if (isNaN(cel) || isNaN(far)){
+                    alert("Please enter a number.");
+                }
+                else if(cel.length != 0 && far.length == 0){
+                    cel = parseFloat(cel);
+                    myForm.far.value = cel * (9/5) + 32;
+                }
+                else if (cel.length == 0 && far.length != 0){
+                    far = parseFloat(far);
+                    myForm.cel.value = (far - 32) * (5/9);
+                }
+                else if (cel.length == 0 && far.length ==0){
+                    alert("Please enter a value.");
+                }
+                else if (cel.length !=0 && far.length !=0){
+                    alert("Please only enter one value.");
+                }
+                return false;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Celsius Fahrenheit Converter</h1>
+        <form id="form" action="" method="post">
+            <div id="d1">
+                Celsius: <input type="text" name="cel" size="10" /> Fahrenheit: <input type="text" name="far" size="10" />
+            </div>
+
+            <div style="margin-left:100px">
+                <input type="submit" name="submit" value="Convert" style="width:80px; height:40px;" onclick="return convert()"/>
+                <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;" >
+            </div>
+        </form>
+    <a href="low.htm">List of Works</a>
+    </body>
+
+</html>
