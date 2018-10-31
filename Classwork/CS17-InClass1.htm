@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Slide Show</title>
+        <style type="text/css">
+            p {
+                text-align: center;
+            }
+            img {
+                border-width: 10px;
+                border-style: solid;
+                width: 500px;
+            }
+        </style>
+        <script type="text/javascript">
+            let slides = new Array("images/shark1.jpg", "images/shark2.jpeg", "images/shark3.jpg", "images/shark4.jpg");
+            let colors = new Array("red", "yellow", "green", "blue");
+            let descriptions = new Array("Baby shark", "doo doo doo", "doo doo doo", "doo doo doo");
+            let i = 0;
+            let counter = 0;
+            function slideShow(){
+                let img = document.getElementById("sharkImage");
+                if (i == slides.length){
+                    i = 0;
+                }
+                img.src = slides[i];
+                img.style.borderColor = colors[i];
+                document.getElementById("description").innerHTML = descriptions[i] + "<br>Global Counter = " + counter + "<br>Local counter = " + i;
+                i++;
+                counter++;
+                setTimeout("slideShow()", 1000);
+            }
+        </script>
+    </head>
+
+    <body onload="slideShow()">
+        <p>
+            <img id="sharkImage" src="" alt="Slide Show of Sharks" title="Sharks"/>
+            <br><br>
+            <span id="description"></span>
+        </p>
+    </body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Scrolling Text</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+            }
+            #msg {
+                position: absolute;
+                color: Navy;
+                font-family: Arial;
+                width: auto;
+            }
+            div {
+                border: 1px solid black;
+                height: 50px;
+                margin-left: 300px;
+                margin-right: 300px;
+                background-color: Yellow;
+            }
+        </style>
+        <script type="text/javascript">
+            var p = 320; k = 0;
+            var messageList = new Array ("Baby shark", "doo doo doo", "doo doo doo", "doo doo doo");
+            function doScroll(){
+                document.getElementById("msg").innerHTML = messageList[k];
+                document.getElementById("msg").style.left = p + "px";
+                if (p > 700){
+                    p = 320;
+                    k++;
+                }
+                else if (k == messageList.length){
+                    k = 0;
+                }
+                else{
+                    p = p + 5;
+                }
+                setTimeout("doScroll()", 100);
+            }
+        </script>
+    </head>
+
+    <body onload="doScroll()">
+        <h1> Moving Text</h1>
+        <div>
+            <h2 id="msg"></h2>
+        </div>
+    </body>
+
+</html>
