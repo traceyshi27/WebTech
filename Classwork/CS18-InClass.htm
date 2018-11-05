@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Image Demo </title>
+        <style type="text/css">
+        </style>
+        <script>
+            function changePic() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("class");
+                ctx.drawImage(img, 0, 0);
+                var imgData = ctx.getImageData(0, 0, c.width, c.height);
+                //red channel
+                var i;
+                for (i = 0; i < imgData.data.length; i += 4){
+                    let avg = (imgData.data[1] + imgData.data[i+1] + imgData.data[1+2]) / 3*0.5;
+                    imgData.data[i] = avg;
+                    imgData.data[i+1] = avg;
+                    imgData.data[i+2] = avg;
+                }
+                ctx.putImageData(imgData, 0, 0);
+            }
+        </script>
+    </head>
+
+    <body>
+        <img id="class" src="images/class2.jpg" width="600" alt="class" />
+        <canvas id="myCanvas" width="600" height="450">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+        <p>
+            <button id="button1" onclick="changePic()">Change</button>
+            <button id="button2" onclick="getGrayscale()">Grayscale</button>
+            <button id="button3" onclick="invert()">Negative</button>
+        </p>
+
+    </body>
+
+</html>

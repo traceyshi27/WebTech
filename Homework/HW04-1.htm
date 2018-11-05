@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 4-1</title>
+        <style type="text/css">
+            h1 {
+                color: navy;
+                font-family: Arial;
+            }
+            p#instruction {
+                font-family: Cursive;
+                color: Navy;
+                margin-right: 300px;
+            }
+            form {
+                padding-left: 50px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                background-color: Silver;
+                font-family: Cursive;
+                color: Navy;
+                width: 60%;
+            }
+            body {
+                padding-left: 100px;
+            }
+            span {
+                color: Lime;
+            }
+        </style>
+        <script type="text/javascript">
+            function generate(){
+                var word1 = ["I", "We", "They"];
+                var word2 = ["will", "can", "must"];
+                var word3 = ["eat.", "study.", "play."];
+                var form = document.getElementById("form");
+                if (form.word1.value == "" || form.word2.value == "" || form.word3.value == ""){
+                    alert("Please select all options.");
+                }
+                else if (form.word1.value != "" && form.word2.value != "" && form.word3.value != ""){
+                    //form.results.value = form.word1.value + " " + form.word2.value + " " + form.word3.value;
+                    var random1 = word1[Math.floor(Math.random() * word1.length)];
+                    var random2 = word2[Math.floor(Math.random() * word2.length)];
+                    var random3 = word3[Math.floor(Math.random() * word3.length)];
+                    form.results.value = random1 + " " + random2 + " " + random3;
+                }
+                return false;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Homework 4-1: Make your own sentence</h1>
+        <p id="instruction">
+            Write a function that displays the sentence (consisting of 3 words) that the user creates by selecting one
+            word from each
+            of the three drop-down menus. The sentence must be displayed only when the user picks the third word (10
+            pts). No
+            additional
+            words are required. Validate the function by ensuring that the user selects one valid word from each - if
+            not,
+            provide an alert to the user indicating that the user must select a valid word. Nothing should be displayed
+            if
+            the user has not picked one from each list of words. (5 pts)
+			<br>
+			<br>
+            When the button is clicked, generate a sentence by randomly choosing words from each of the three drop-down
+            lists.(5 pts)
+        </p>
+        <form id="form" action="" method="post">
+            <p>
+                The sentence is: <br/><textarea name="results" cols="40" rows="2"></textarea>
+            </p>
+            <p>
+                <select name="word1">
+                    <option selected value="">Select Word 1</option>
+                    <option value="I">I</option>
+                    <option value="We">We</option>
+                    <option value="They">They</option>
+                </select>
+            </p>
+            <p>
+                <select name="word2">
+                    <option selected value="">Select Word 2</option>
+                    <option value="will"> will</option>
+                    <option value="can"> can</option>
+                    <option value="must"> must</option>
+                </select>
+            </p>
+            <p>
+                <select name="word3">
+                    <option selected value="">Select Word 3</option>
+                    <option value="eat."> eat.</option>
+                    <option value="study."> study.</option>
+                    <option value="play."> play.</option>
+                </select>
+            </p>
+            <button onclick="return generate()">Random Sentence Generator</button>
+        </form>
+    </body>
+
+</html>
