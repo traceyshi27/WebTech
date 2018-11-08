@@ -10,20 +10,36 @@
                 font-weight: bold;
                 text-align: center;
             }
+            #silver{
+                background-color: silver;
+                margin: 0px 250px;
+                font-family: cursive;
+                font-size: 1.5em;
+                font-style: italic;
+                padding: 20px 0px 20px 200px;
+            }
+            body,a{
+                color: olive;
+            }
+            a:hover{
+                background-color: orange;
+            }
         </style>
     </head>
 
     <body>
         <h1> Summer 2017 Exam - Index Page</h1>
-        <ol>
-            <li><a href="Q2.htm">Question 2</a></li>
-                <ul>
-                    <li>Retina Display</li>
-                    <li>Criticsm</li>
-                </ul>
-            <li><a href="Q3.htm">Question 3</a></li>
-            <li><a href="Q4.htm">Question 4</a></li>
-            <li><a href="Q5.htm">Question 5</a></li>
-        </ol>
+        <div id="silver">    
+            <ol type="i">
+                <li><a href="Q2.htm">Question 2</a></li>
+                    <ul style="list-style-type:square">
+                        <li><a href="Q2.htm#retina">Retina Display</a></li>
+                        <li><a href="Q2.htm#criticism">Criticsm</a></li>
+                    </ul>
+                <li><a href="Q3.htm">Question 3</a></li>
+                <li><a href="Q4.htm">Question 4</a></li>
+                <li><a href="Q5.htm">Question 5</a></li>
+            </ol>
+        </div>
     </body>
 </html>

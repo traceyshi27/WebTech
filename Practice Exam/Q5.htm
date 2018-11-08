@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web Tech Exam - Q5</title>
+        <style type="text/css">
+            form {
+                font-family: Arial;
+                font-weight: bold;
+                padding: 30px;
+                width: 60%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: Silver;
+            }
+            h1 {
+                font-family: Arial;
+                font-weight: bold;
+                text-align: center;
+            }
+            p#instruction {
+                font-family: arial;
+                font-size: 16pt;
+                color: navy;
+                padding: 10px 100px 10px 100px;
+                text-align: left;
+            }
+        </style>
+        <script type="text/javascript">
+            function sum(){
+                let form = document.getElementById("form");
+                let all = document.getElementById("all");
+                let even = document.getElementById("even");
+                let odd = document.getElementById("odd");
+                let result = 0;
+                if (isNaN(form.from.value) || isNaN(form.to.value)){
+                    alert("Please only enter numbers.");
+                }
+                if (form.from.value == "" || form.to.value == ""){
+                    alert("Please enter both inputs.");
+                }
+                else if (all.checked){
+                    for (let i=parseFloat(form.from.value); i<=parseFloat(form.to.value); i++){
+                        result = result + i;
+                    }
+                }
+                else if (even.checked){
+                    for (let i=parseFloat(form.from.value); i<=parseFloat(form.to.value); i++){
+                        if ((i%2) == 0){
+                            result = result + i;
+                        }
+                    }
+                }
+                else if (odd.checked){
+                    for (let i=parseFloat(form.from.value); i<=parseFloat(form.to.value); i++){
+                        if ((i%2) != 0){
+                            result = result + i;
+                        }
+                    }
+                }
+                document.getElementById("result").innerHTML = result;
+                return false;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Web Tech Exam - Question 5</h1>
+        <p id="instruction">
+            Please create the following functionality using the form given below. The user will enter two integers in the two text inputs.
+            When SUM button is clicked, the sum of <b>all</b> the integers between these two numbers (inclusive) will be calculated
+            and displayed. You do not need to do validations. (10 points)
+            <br> <br> For extra points, you can do following things:
+            <br>1. calculate the sum of all integers/even numbers/odd numbers based on user's selection. (5 points)
+            <br>2. validate the inputs properly. (5 points)
+        </p>
+        <form id="form">
+            <p>
+                From:<input type="text" name="from" size="10"/>
+                To:<input type="text" name="to" size="10">
+            </p>
+            <p>
+                Please select (for extra points):
+                <br><br>
+                all integers<input id="all" type="radio" name="types" value="all">
+                even
+                numbers<input id="even" type="radio" name="types" value="even">
+                odd numbers<input id="odd" type="radio" name="types" value="odd">
+                <br><br>
+            </p>
+            <p>
+                <input onclick="return sum()" type="submit" name="Sum" value="SUM">
+                <input type="reset" name="reset" value="CLEAR">
+            </p>
+            <p>The sum is <span id="result"></span>.</p>
+        </form>
+    </body>
+
+</html>
